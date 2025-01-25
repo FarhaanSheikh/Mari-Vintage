@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mari Vintage</title>
+    <style>
+        body {
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            padding-top: 160px;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        header {
+            background-color: #2C3E50;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            font-family: 'Georgia', serif;
+            font-size: 36px;
+            margin: 0;
+            font-weight: normal;
+            color: #fff;
+        }
+        
+        header p {
+            color: white;
+            font-size: 18px;
+            margin: 10px 0 0;
+            font-weight: 300;
+        }
+        
+        .search-bar {
+            position: fixed;
+            top: 120px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .search-bar input {
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 25px;
+            border: 1px solid #ddd;
+            width: 300px;
+        }
+        
+        .search-bar button {
+            padding: 12px 20px;
+            font-size: 16px;
+            background-color: #8e44ad;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        
+        nav {
+            background-color: #16a085;
+            padding: 20px 0;
+            position: fixed;
+            top: 180px;
+            left: 0;
+            right: 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav li {
+            margin: 0 20px;
+        }
+        
+        nav a {
+            color: white;
+            font-size: 14px;
+            padding: 10px 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+        }
+        
+        nav a:hover {
+            background-color: #bae400;
+            border-radius: 4px;
+        }
+        
+        .Home-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .product {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .product img {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+            border-bottom: 1px solid #e5e5e5;
+            border-radius: 10px;
+        }
+        
+        .product-details {
+            flex-grow: 1;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .product-details h3 {
+            font-size: 20px;
+            color: #333;
+            margin: 0;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .price {
+            font-size: 18px;
+            font-weight: 600;
+            color: #f6f6f6;
+            margin-top: 10px;
+            background-color: #06e837;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product:hover h3 {
+            color: #3b5c3a;
+        }
+        
+        .product:hover .price {
+            transform: scale(1.1);
+            color: #2c6b2f;
+            background-color: #d0e5d5;
+        }
+        
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 14px;
+        }
+        
+        footer a {
+            color: #88b74d;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 30px;
+            }
+            nav a {
+                font-size: 13px;
+                padding: 8px 12px;
+            }
+            .Home-content {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            footer {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Mari Vintage</h1>
+        <p>Where Comfort Meets Couture</p>
+    </header>
+    <div class="search-bar">
+        <input type="text" placeholder="Search for products...">
+        <button>Search</button>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li> <a href="men.html">Men</a></li>
+            <li><a href="women.html ">Women</a></li>
+            <li><a href="accessories.html ">Accessories</a></li>
+            <li><a href="contact.html ">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="Home-content ">
+        <div class="product ">
+            <img src="fg.jpg " alt="White Sweat Shirt " />
+            <div class="product-details ">
+                <h3>White Sweat Shirt For Men</h3>
+                <p class="price ">₹ 1,199</p>
+            </div>
+        </div>
+
+        <div class="product ">
+            <img src="th.jpg " alt="Black Sweat Shirt " />
+            <div class="product-details ">
+                <h3>Black Sweat Shirt For Men</h3>
+                <p class="price ">₹ 1,199</p>
+            </div>
+        </div>
+
+        <div class="product ">
+            <img src="white shirt.jpg " alt="White Shirt " />
+            <div class="product-details ">
+                <h3>White Shirt For Men</h3>
+                <p class="price ">₹ 1,299</p>
+            </div>
+        </div>
+
+        <div class="product ">
+            <img src="black jumper.jpg " alt="Black Jumper For Women " />
+            <div class="product-details ">
+                <h3>Black Jumper For Women</h3>
+                <p class="price ">₹ 1,499</p>
+            </div>
+        </div>
+
+        <div class="product ">
+            <img src="Black Solid New Neckline Top.jpg " alt="Black Solid Neckline Top For Women " />
+            <div class="product-details ">
+                <h3>Black Solid Neckline Top For Women</h3>
+                <p class="price ">₹ 1,399</p>
+            </div>
+        </div>
+
+        <div class="product ">
+            <img src="Women Black Scoop Neck Full Sleeves Top.jpg " alt="Black Scoop Neck Full Sleeves Top " />
+            <div class="product-details ">
+                <h3>Black Scoop Neck Full Sleeves Top</h3>
+                <p class="price ">₹ 1,199</p>
+            </div>
+        </div>
+
+        <div class="product ">
+            <img src="davidoff cool water perfume.jpg " alt="Davidoff Cool Water Perfume " />
+            <div class="product-details ">
+                <h3>Davidoff Cool Water Perfume</h3>
+                <p class="price ">₹ 2,199</p>
+            </div>
+        </div>
+
+        <div class="product ">
+            <img src="Angel skull pendant.jpg " alt="Angel Skull Pendant " />
+            <div class="product-details ">
+                <h3>Angel Skull Pendant</h3>
+                <p class="price ">₹ 899</p>
+            </div>
+        </div>
+
+        <div class="product ">
+            <img src="fossil gen 5 garret.jpg " alt="Fossil Gen 5 Garrett " />
+            <div class="product-details ">
+                <h3>Fossil Gen 5 Garrett</h3>
+                <p class="price ">₹ 15,999</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Fashion Store | <a href="# ">Privacy Policy</a> | <a href="# ">Terms & Conditions</a></p>
+    </footer>
+</body>
+
+</html>

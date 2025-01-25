@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Mari Vintage</title>
+    <style>
+        body {
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            padding-top: 160px;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        header {
+            background-color: #2C3E50;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            font-family: 'Georgia', serif;
+            font-size: 36px;
+            margin: 0;
+            font-weight: normal;
+            color: #fff;
+        }
+        
+        header p {
+            color: white;
+            font-size: 18px;
+            margin: 10px 0 0;
+            font-weight: 300;
+        }
+        
+        .search-bar {
+            position: fixed;
+            top: 120px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .search-bar input {
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 25px;
+            border: 1px solid #ddd;
+            width: 300px;
+        }
+        
+        .search-bar button {
+            padding: 12px 20px;
+            font-size: 16px;
+            background-color: #8e44ad;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        
+        nav {
+            background-color: #16a085;
+            padding: 20px 0;
+            position: fixed;
+            top: 180px;
+            left: 0;
+            right: 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav li {
+            margin: 0 20px;
+        }
+        
+        nav a {
+            color: white;
+            font-size: 14px;
+            padding: 10px 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+        }
+        
+        nav a:hover {
+            background-color: #bae400;
+            border-radius: 4px;
+        }
+        
+        .cart-content {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .cart-header {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+        
+        .cart-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+        
+        .cart-table th,
+        .cart-table td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        
+        .cart-table th {
+            background-color: #16a085;
+            color: #fff;
+        }
+        
+        .cart-table td img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        
+        .cart-summary {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .cart-summary span {
+            margin-left: 20px;
+        }
+        
+        .checkout-btn {
+            padding: 12px 20px;
+            font-size: 18px;
+            background-color: #8e44ad;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            display: block;
+            width: 200px;
+            margin: 0 auto;
+        }
+        
+        .checkout-btn:hover {
+            background-color: #732d91;
+        }
+        
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 14px;
+        }
+        
+        footer a {
+            color: #88b74d;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 30px;
+            }
+            nav a {
+                font-size: 13px;
+                padding: 8px 12px;
+            }
+            .cart-content {
+                padding: 40px 10px;
+            }
+            footer {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Mari Vintage</h1>
+        <p>Where Comfort Meets Couture</p>
+    </header>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Search for products...">
+        <button>Search</button>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="men.html">Men</a></li>
+            <li><a href="women.html">Women</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="cart-content">
+        <div class="cart-header">Your Cart</div>
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="fg.jpg" alt="White Sweat Shirt" />
+                        <h3>White Sweat Shirt For Men</h3>
+                    </td>
+                    <td>₹ 1,199</td>
+                    <td>
+                        <input type="number" value="1" min="1" max="10" />
+                    </td>
+                    <td>₹ 1,199</td>
+                    <td><button>Remove</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="black jumper.jpg" alt="Black Jumper For Women" />
+                        <h3>Black Jumper For Women</h3>
+                    </td>
+                    <td>₹ 1,499</td>
+                    <td>
+                        <input type="number" value="1" min="1" max="10" />
+                    </td>
+                    <td>₹ 1,499</td>
+                    <td><button>Remove</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="cart-summary">
+            <span><strong>Total:</strong> ₹ 2,698</span>
+        </div>
+
+        <a href="checkout.html">
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Fashion Store | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+    </footer>
+</body>
+
+</html>
